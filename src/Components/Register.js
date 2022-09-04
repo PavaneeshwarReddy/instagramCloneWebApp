@@ -4,12 +4,14 @@ import { createUserWithEmailAndPassword } from "firebase/auth"
 import {auth} from "../Firebase/FirebaseConfig"
 import "../CSS/Login.css"
 function Register() {
+  const naviagateToPage = useNavigate();
   const [emailController, setEmailController] = useState("")
   const [passwordController, setPasswordController] = useState("")
   const registerUser = () => {
     createUserWithEmailAndPassword(auth, emailController, passwordController).then((userCredential)=>{
       const user = userCredential.user;
       console.log(user["email"]); 
+      naviagateToPage("/username");
     }).catch((registerError)=>{
       console.log(registerError.message);
     })

@@ -5,6 +5,7 @@ import Navbar from "./Components/Navbar"
 import Register from "./Components/Register"
 import Requests from "./Components/Requests"
 import Home from "./Components/Home"
+import Username from "./Components/Username"
 function App() {
   return (
    <div>
@@ -15,6 +16,7 @@ function App() {
                 <Route path="/register" element={<Register/>}></Route>
                 <Route path="/requests" element={<Requests/>}></Route>
                 <Route path="/friends" element={<Friends/>}></Route>
+                <Route path="/username" element={<Username/>}></Route>
           </Routes>
    </div>
   );
