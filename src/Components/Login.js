@@ -13,6 +13,8 @@ function Login() {
             const user = userCredential.user;
             console.log(user["email"]);
             
+      }).catch((errro)=>{
+        console.log("User not Found");
       })
 
   }

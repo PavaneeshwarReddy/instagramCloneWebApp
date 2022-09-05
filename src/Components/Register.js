@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom"
 import { createUserWithEmailAndPassword } from "firebase/auth"
-import {auth} from "../Firebase/FirebaseConfig"
+import {auth,database} from "../Firebase/FirebaseConfig"
+import {addDoc,collection} from "firebase/firestore"
 import "../CSS/Login.css"
 function Register() {
   const naviagateToPage = useNavigate();
